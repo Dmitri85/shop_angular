@@ -1,0 +1,54 @@
+<md-toolbar>
+	<div class="md-toolbar-tools">
+		<p><strong>Angular Application</strong></p>
+		<md-button class="md-raised " md-theme="altTheme" aria-label="Learn More" ng-click="vm.openSideBar()">
+			<md-icon class="mdi mdi-plus-circle custom-plus"></md-icon>
+ 			NEW
+		 </md-button>
+		 <md-button class="md-raised " md-theme="altTheme" aria-label="Learn More" ng-click="showFilters = true">
+			<md-icon class="mdi mdi-magnify custom-plus"></md-icon>
+ 			SEARCH
+		 </md-button>
+		 
+	</div>
+</md-toolbar>
+
+
+
+<div class="filters" layout="row" layout-align="center center" ng-show="showFilters" >
+  <md-input-container id="filterId">
+    <label>Enter a Search</label>
+    <input ng-model="classifiedsFilter" type="text">
+  </md-input-container>
+
+  <md-input-container id="categoryId" >
+    <label>Category</label>
+    <md-select ng-model="category">
+      <md-option ng-repeat="category in vm.categories" value="{{ category }}">  {{ category }} </md-option>
+    </md-select>
+  </md-input-container>
+  
+  <div layout="row">
+    <md-button ng-click="classifiedsFilter = ''; category='' " class="md-warn">
+      Clear
+    </md-button>
+  </div>
+
+</div>
+
+<ui-view></ui-view>
+
+
+<md-content >
+	
+	<classified-card 
+	class="marketPlace"
+	classifieds="vm.classifieds" 
+	classifieds-filter="classifiedsFilter"
+	category="category"
+	class="md-padding" 
+	layout="row" 
+	layout-wrap>
+	</classified-card>
+	
+</md-content>

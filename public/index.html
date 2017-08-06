@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<title>Angular App</title>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="node_modules/tether.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="node_modules/angular-material/angular-material.css" />
+		<link rel="stylesheet" href="node_modules/mdi/css/materialdesignicons.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		
+		
+		<script src="node_modules/angular/angular.js"></script>
+		<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script src="node_modules/angular-animate/angular-animate.js"></script>
+		<script src="node_modules/angular-aria/angular-aria.js"></script>
+		<script src="node_modules/angular-material/angular-material.js"></script>
+		
+		<!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+
+		<!-- AngularFire -->
+		<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+		
+		
+		<script>
+
+		  var config = {
+		    apiKey: "AIzaSyB9iJenMhZ0SUoJ6Plt1VcOBoyraztPX2c",
+		    authDomain: "ng-shop-array.firebaseapp.com",
+		    databaseURL: "https://ng-shop-array.firebaseio.com",
+		    storageBucket: "ng-shop-array.appspot.com",
+		    messagingSenderId: "917808884410"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+		
+		<script src="https://cdn.jsdelivr.net/lodash/4.17.0/lodash.min.js"></script>
+	</head>
+	
+	<body ng-controller="mainCtrl">
+		
+		
+		
+		<ui-view></ui-view>
+		
+
+		<script src="scripts/app.js"></script>
+		<script src="Components/classifieds/appController.js"></script>
+		<script src="Components/classifieds/customServiceForHttp.js"></script>
+		<script src="Components/classifieds/new/appController.new.js"></script>
+		<script src="Components/classifieds/edit/appController.edit.js"></script>
+		<script src="Components/classifieds/Card/classified-card.dir.js"></script>
+		
+		
+		
+	</body>
+</html>
